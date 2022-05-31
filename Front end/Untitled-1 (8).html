@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="air.css">
+</head>
+
+<body>
+    <img src="Logo.png" alt="gg" style="width:200px ; height:120px">
+    <div class="word">
+        <h1>The Sky is waiting for<br> You</h1>
+    </div>
+    </div>
+    <div class="box">
+        <h3 style="padding-left:10px ;">Booking Now</h3>
+        <form class="form" action="ticket.html">
+            <input type="text" name="From" placeholder="From" id="from">
+            <input type="text" name="To" placeholder="To" id="to">
+            <br> <br>
+            <input type="text" name="From" placeholder="Departure Date" id="date1">
+            <input type="text" name="To" placeholder="Departure Time" id="time1">
+            <br> <br>
+            <input type="text" name="From" placeholder="Return Date" id="date2">
+            <input type="text" name="To" placeholder="Return Time" id="time2">
+            <br> <br>
+            <span>Class</span> <br>
+            <select id="class">
+                <option>Personal Travel</option>
+                <option>Business Travel</option>
+            </select>
+            <hr>
+            <h3>Personal Information</h3>
+            <input type="text" name="Name" placeholder="First Name" id="name">
+            <input type="text" name="Name" placeholder="Last Name" id="lname">
+            <br> <br>
+            <input type="text" name="email" placeholder="Email" id="email">
+            <input type="password" name="Password" placeholder="Password" id="pass">
+            <br> <br>
+            <input type="text" name="age" placeholder="Age" id="age">
+            <input type="text" name="adress" placeholder="Adress" id="address">
+            <br> <br>
+            <input type="text" name="Gender" placeholder="Gender" id="gender">
+            <input class="submit" type="submit" name="submit" id="submitBtn" />
+        </form>
+    </div>
+
+    <script>
+        const submit = document.getElementById("submitBtn");
+        const from = document.getElementById("from");
+        const to = getElementById("to");
+
+        submit.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            const trips = await fetch("http://localhost:3000/tickets", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            
+            });
+            
+            const FirstName = document.getElementById('name').value;
+            localStorage.setItem('textvalue', FirstName);
+            const From = document.getElementById('from').value;
+            localStorage.setItem('textvalue1', From);
+            const To = document.getElementById('to').value;
+            localStorage.setItem('textvalue2', trips.destination);
+            const Date1 = document.getElementById('date1').value;
+            localStorage.setItem('textvalue3', Date1);
+            const Time1 = document.getElementById('time1').value;
+            localStorage.setItem('textvalue4', Time1);
+            const cl = document.getElementById('class').value;
+            localStorage.setItem('textvalue5', cl);
+            const Date2 = document.getElementById('date2').value;
+            localStorage.setItem('textvalue6', Date2);
+            const Time2 = document.getElementById('time2').value;
+            localStorage.setItem('textvalue7', Time2);
+
+            return false
+        
+    });
+    </script>
+</body>
+
+</html>

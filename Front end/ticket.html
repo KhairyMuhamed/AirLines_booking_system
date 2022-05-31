@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="box">
+       Welcome <span id="name"></span>
+       <br>
+       Your Trip is From <span id="from"></span> to <span id="to"></span>
+       <br>
+       Date : <span id="date1"></span>
+       <br>
+       Time : <span id="time1"></span>
+       <br>
+       Return Date : <span id="date2"></span>
+       <br>
+       Return Time : <span id="time2"></span>
+       <br>
+       Class : <span id="class"></span>
+    </div>
+    <a href="2.html">
+        <button>Purchase</button>
+    </a>
+
+        <script>
+            document.getElementById('name').innerHTML=localStorage.getItem('textvalue');
+            document.getElementById('from').innerHTML=localStorage.getItem('textvalue1');
+            document.getElementById('to').innerHTML=localStorage.getItem('textvalue2');
+            document.getElementById('date1').innerHTML=localStorage.getItem('textvalue3');
+            document.getElementById('time1').innerHTML=localStorage.getItem('textvalue4');
+            document.getElementById('date2').innerHTML=localStorage.getItem('textvalue6');
+            document.getElementById('time2').innerHTML=localStorage.getItem('textvalue7');
+            document.getElementById('class').innerHTML=localStorage.getItem('textvalue5');
+        </script>
+    </body>
+    <style>
+        .box{
+            background-color: rgb(55, 138, 240);
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+</html>

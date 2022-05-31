@@ -1,0 +1,70 @@
+body{
+    background-image: url(air.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box{
+    background-repeat: no-repeat;
+    background-color: rgb(55, 138, 240);
+    width: 700px;
+    height: 650px;
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+}
+.word{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(97, 175, 235);
+    font-size: 32px;
+    position: relative;
+    top: 100px;
+
+}
+span{
+    font-weight: bold;
+}
+h3{
+    font-size: 28px;
+
+}
+form{
+    padding: 0px 0px 0px 20px;
+}
+
+input[type=text] {
+    width: 300px;
+    height: 25px;
+    border: 1.5px solid;
+}
+select{
+width: 30%;
+font-weight: bold;
+
+}
+button{
+    width: 18%;
+    height: 3.5%;
+    text-align: center;
+    text-decoration: none;
+    position:absolute;
+    left: 71%;
+    bottom: 4%;
+    background-color: orange;
+    font-weight: bold;
+    color: black; 
+    border: 2px white;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:  white;
+    padding: 0.3%;
+    color: black;
+    text-align: center;
+    font-size: 15px;
+  }
